@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start" />
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/search_title"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/address_line_1"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/address_line_2"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/city"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/state"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/zip"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/button_search"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/button_location"
+            android:visibility="gone" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="2000">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/representatives_recyclerView"
+            app:touchAnchorSide="top" />
+
+    </Transition>
+</MotionScene>
